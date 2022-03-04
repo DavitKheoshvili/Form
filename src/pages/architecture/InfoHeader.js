@@ -1,13 +1,14 @@
 import React from "react"
 
-function Thanks() {
+
+function InfoHeader() {
     return (
       <div>
-        <h1> I am Thanks (page7)</h1>
+        <h1>I am InfoHeader</h1>
         
       </div>
     );
   }
   
-  export default Thanks;
+  export default InfoHeader;
   
