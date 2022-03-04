@@ -12,7 +12,6 @@ import SubmittedItemList from "./pages/SubmittedItemList";
 function App() {
   const  [page, setPage] = useState(1);
 
-
   return (
     <div className="App">
       

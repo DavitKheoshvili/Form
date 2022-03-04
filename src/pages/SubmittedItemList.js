@@ -7,7 +7,7 @@ function SubmittedItemList({setPage}) {
   
     return (
       <div>
-        <h1> I am SubmittedItemList (page8)</h1>
+        <h1> Submited Applications (page8)</h1>
         <button onClick={goLandingPage}>Go Welcome Page</button>
       </div>
     );

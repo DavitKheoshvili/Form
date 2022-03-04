@@ -1,11 +1,15 @@
 import React from "react"
-
+import Form from "./Form";
+import InfoText from "./InfoText"
+import css from "./css.css"
 
 /*Here I will need page counter*/
-function Content() {
+function Content({page}) {
+  //console.log(page)
     return (
-      <div>
-        <h1>I am Content</h1>
+      <div className="content">
+        <Form page={page}/>
+        <InfoText />
       </div>
     );
   }

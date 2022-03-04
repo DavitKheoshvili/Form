@@ -4,8 +4,7 @@ import InfoHeader from "./InfoHeader";
 
 function Header() {
     return (
-      <div>
-        <h1>this is Header</h1>
+      <div className="headers">
         <ContentHeader />
         <InfoHeader />
       </div>

@@ -14,7 +14,7 @@ function Submit({page, setPage}) {
 
   return (
     <div>
-        <h1> I am Submit (page6)</h1>
+        <h1> page6</h1>
         <button onClick={submitClicked}>Submit</button>
         <button onClick={goBackClicked}>go back</button>
       </div>

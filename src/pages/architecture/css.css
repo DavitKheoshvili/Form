@@ -2,3 +2,19 @@ div {
     padding: 2px;
     border: 2px solid black;
 }
+
+.headers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+

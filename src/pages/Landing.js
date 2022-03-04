@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import MainHeader from "./architecture/MainHeader";
-import SubmittedItemList from "./SubmittedItemList";
+
 
 
 function Landing({setPage}) {
@@ -10,9 +10,7 @@ function Landing({setPage}) {
   const submitedAplicationsClicked = () => {
     setPage(8)
   }
-  const newWindow = () => {
-    submitedAplicationsClicked()
-  }
+  
   return (
     <div>
       <h3>page1</h3>
