@@ -7,9 +7,9 @@ import css from "./css.css"
 function Content({page}) {
   //console.log(page)
     return (
-      <div className="content">
-        <Form page={page}/>
-        <InfoText />
+      <div className="content" >
+        <Form page={page} />
+        <InfoText page={page} />
       </div>
     );
   }

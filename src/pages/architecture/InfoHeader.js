@@ -1,11 +1,13 @@
 import React from "react"
 
 
-function InfoHeader() {
+function InfoHeader({page}) {
     return (
       <div>
-        <h1>I am InfoHeader</h1>
-        
+        { page === 2 && <h1>Redberry Origins</h1>}
+        { page === 3 && <h1>A bit about our battles</h1>}
+        { page === 4 && <h1>Redberry Covid Policies</h1>}
+        { page === 5 && <h1>Redberrian Insights</h1>}
       </div>
     );
   }

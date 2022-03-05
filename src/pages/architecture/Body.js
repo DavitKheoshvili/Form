@@ -9,8 +9,7 @@ I need pages pages counter here
 function Body({page}) {
     return (
       <div>
-        <h1>I am Body</h1>
-        <Header />
+        <Header page={page}/>
         <Content page={page}/>
       </div>
     );

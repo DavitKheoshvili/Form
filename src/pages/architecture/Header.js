@@ -2,11 +2,11 @@ import React from "react"
 import ContentHeader from "./ContentHeader";
 import InfoHeader from "./InfoHeader";
 
-function Header() {
+function Header({page}) {
     return (
       <div className="headers">
-        <ContentHeader />
-        <InfoHeader />
+        <ContentHeader page={page}/>
+        <InfoHeader page={page}/>
       </div>
     );
   }
