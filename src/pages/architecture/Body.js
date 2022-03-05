@@ -6,11 +6,11 @@ import Header from "./Header";
 I need pages pages counter here
 */ 
 
-function Body({page}) {
+function Body({page, result, setResult}) {
     return (
       <div>
         <Header page={page}/>
-        <Content page={page}/>
+        <Content page={page } result={result} setResult={setResult}/>
       </div>
     );
   }
