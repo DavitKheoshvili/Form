@@ -22,7 +22,6 @@ function Submit({page, setPage, result, setResult}) {
 
   return (
       <div>
-        <h1> page6</h1>
         <button onClick={submitClicked}>Submit</button>
         <button onClick={goBackClicked}>go back</button>
         <br />

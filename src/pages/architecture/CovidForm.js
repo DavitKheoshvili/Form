@@ -1,27 +1,29 @@
 import React from "react"
 
 
-function CovidForm({result, setResult}) {
+function CovidForm({result, setResult, covidErrs, setCovidErrs}) {
     const strToBool = (str) => {
-        if(str == "true") return true;
-        return false
+        if(str == "true") {return true;}else {return false}
     }
     const setWorkPrefer = (e) => {
         setResult({...result, work_preference: e.target.value})
+        setCovidErrs({...covidErrs, work_preference_err: ""})
     }
     const setHadCovid = (e) => {
-        
         setResult({...result, had_covid: strToBool(e.target.value)})
-        
-        }
+        setCovidErrs({...covidErrs, had_covid_err: ""})
+    }
     const setHadCovidAt = (e) => {
         setResult({...result, had_covid_at: e.target.value})
+        setCovidErrs({...covidErrs, had_covid_at_err: ""})
     }
     const setVaccinated = (e) => {
-        setResult({...result, vaccinated: e.target.value})
+        setResult({...result, vaccinated: strToBool(e.target.value)})
+        setCovidErrs({...covidErrs, vaccinated_err: ""})
     }
     const setVaccinatedAt = (e) => {
         setResult({...result, vaccinated_at: e.target.value})
+        setCovidErrs({...covidErrs, vaccinated_at_err: ""})
     }
     return (
       <>
@@ -31,24 +33,35 @@ function CovidForm({result, setResult}) {
             <input type="radio" id='from_home' name="work_prefer" value="from_home"/>From Home <br />
             <input type="radio" id='hybrid' name="work_prefer" value="hybrid"/>Hybrid    
         </form>
-
+        <p>{covidErrs.work_preference_err}</p>
         <h1>did you contact to Covid 19? :(</h1>
         <form onChange={setHadCovid}>
             <input type="radio" value={true} name="hadCovid"/>Yes <br />
             <input type="radio" value={false} name="hadCovid"/>No
         </form>
-        <h1>when?</h1>
-        <input type="date" value={result.had_covid_at} min="2018-01-01"  onChange={setHadCovidAt}/>
-
+        <p>{covidErrs.had_covid_err}</p>
+        {result.had_covid && 
+        <>
+            <h1>when?</h1>
+            <input type="date" value={result.had_covid_at} min="2018-01-01"  onChange={setHadCovidAt}/>
+            <p>{covidErrs.had_covid_at_err}</p>
+        </>}
+        
         <h1>have you been vacinated?</h1>
         <form onChange={setVaccinated}>
             <input type="radio" name="vacinated" value={true}/>Yes <br />
             <input type="radio" name="vacinated" value={false}/>No
         </form>
-        <h1>when did you get your last covid vaccine?</h1>
-        <input type="date" value={result.vaccinated_at} min="2018-01-01"  onChange={setVaccinatedAt}/>
-        
-        {console.log(result)}
+        <p>{covidErrs.vaccinated_err}</p>
+
+        {result.vaccinated &&
+        <>
+            <h1>when did you get your last covid vaccine?</h1>
+            <input type="date" value={result.vaccinated_at} min="2018-01-01"  onChange={setVaccinatedAt}/>
+            <p>{covidErrs.vaccinated_at_err}</p>
+        </>
+        }
+        <h1>{covidErrs.fill_all_err}</h1>
       </>
     );
   }

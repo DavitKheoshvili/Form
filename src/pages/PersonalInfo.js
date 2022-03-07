@@ -10,7 +10,7 @@ function PersonalInfo({page, setPage, result, setResult}) {
       phone_err: ""
     })
     const nextClicked = () => {
-      if(validName(result.first_name) && validLastName(result.last_name) && validEmail(result.email) && validPhone(result.phone)){
+      if(checkValidations()){
         setPage(page + 1)
       }
 
@@ -18,11 +18,17 @@ function PersonalInfo({page, setPage, result, setResult}) {
     const backClicked = () => {
       setPage(page - 1)
     }
+    //using this function for developing process and probably will delete this after work will done.
     const checkValidations = () => {
       validName(result.first_name)
       validLastName(result.last_name)
       validEmail(result.email)
       validPhone(result.phone)
+      if(validName(result.first_name) && validLastName(result.last_name) && validEmail(result.email) && validPhone(result.phone)){
+        return true
+      }else{
+        return false
+      }
     }
     const validName = (fName) => {
       if(!/^([a-zA-Z]{2,})$/g.test(fName)){
@@ -52,6 +58,10 @@ function PersonalInfo({page, setPage, result, setResult}) {
       }
     }
     const validPhone = (phone) => {
+      if(result.phone == "") {
+        setErrs({...errs, phone_err: ""})
+        return true
+      }
       if(!/^(\+9955[0-9]{8})$/.test(phone)){
         setErrs({...errs, phone_err: "Phone required. Check phone format: +9955________"})
         return false
@@ -63,19 +73,10 @@ function PersonalInfo({page, setPage, result, setResult}) {
 
     return (
       <div>
-        <h2>this is personal info (page2)</h2>
         <Body page={page} result={result} setResult={setResult} errs={errs}/>
         <div>
           <button onClick={backClicked}>Back</button>
           <button onClick={nextClicked}>Next</button>
-          <button onClick={checkValidations}>Check Validations</button>
-          <p>first name: {result.first_name}</p>
-          <p>first name err: {errs.first_name_err}</p>
-          <p>last name: {result.last_name}</p>
-          <p>last name err: {errs.last_name_err}</p>
-          <p>email name: {result.email}</p>
-          <p>email_err name err: {errs.email_err}</p>
-          <p>phone: {result.phone} phone_err: {errs.phone_err}</p>
         </div>
       </div>
     );
