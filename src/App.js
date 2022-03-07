@@ -12,13 +12,13 @@ import SubmittedItemList from "./pages/SubmittedItemList";
 function App() {
   const  [page, setPage] = useState(1);
   const [resultJson, setResultJson] = useState({
-    token: "",
+    token: "89nOpas|asdanjjh^&as",
     first_name: "",
     last_name: "",
     email: "",
     phone: "",
     skills: [],
-    work_preference: ["from_home", "from_office", "hybrid"],
+    work_preference: '',
     had_covid: false,
     had_covid_at: "1800-01-26",
     vaccinated: false,
@@ -29,10 +29,6 @@ function App() {
   })
   
 
-  const generateToken = () => {
-
-  }
-
   return (
     <div className="App">
       
@@ -41,15 +37,11 @@ function App() {
       { page === 3 && <TechnicalSkillset page={page} setPage={ setPage} result={resultJson} setResult={setResultJson}/>}
       { page === 4 && <Covid page={page} setPage={ setPage} result={resultJson} setResult={setResultJson}/>}
       { page === 5 && <RedberrianInsights page={page} setPage={ setPage} result={resultJson} setResult={setResultJson}/>}
-      { page === 6 && <Submit page={page} setPage={setPage} />}
+      { page === 6 && <Submit page={page} setPage={setPage} result={resultJson} setResult={setResultJson}/>}
       { page === 7 && <Thanks />}
       { page === 8 && <SubmittedItemList setPage={setPage}/>}
 
-      <ul>
-            {resultJson.skills.map(obj => (
-              <li key={obj.id}>id: {obj.id} experience: {obj.experience}</li>
-            ))}
-          </ul>
+      
     </div>
   );
 }

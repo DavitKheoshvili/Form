@@ -13,7 +13,6 @@ function Landing({setPage}) {
   
   return (
     <div>
-      <h3>page1</h3>
       <MainHeader />
         <button onClick={startClicked}>Start Questionarie</button>
         <button onClick={submitedAplicationsClicked}>Submited Applications</button>
