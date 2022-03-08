@@ -27,41 +27,41 @@ function CovidForm({result, setResult, covidErrs, setCovidErrs}) {
     }
     return (
       <>
-        <h1>how would you prefer to work?</h1>
+        <h4>how would you prefer to work?</h4>
         <form onChange={setWorkPrefer}>
             <input type="radio" id='from_office' name="work_prefer" value="from_office"/>From Sairme office <br />
             <input type="radio" id='from_home' name="work_prefer" value="from_home"/>From Home <br />
             <input type="radio" id='hybrid' name="work_prefer" value="hybrid"/>Hybrid    
         </form>
-        <p>{covidErrs.work_preference_err}</p>
-        <h1>did you contact to Covid 19? :(</h1>
+        <p className="err">{covidErrs.work_preference_err}</p>
+        <h4>did you contact to Covid 19? :(</h4>
         <form onChange={setHadCovid}>
             <input type="radio" value={true} name="hadCovid"/>Yes <br />
             <input type="radio" value={false} name="hadCovid"/>No
         </form>
-        <p>{covidErrs.had_covid_err}</p>
+        <p className="err">{covidErrs.had_covid_err}</p>
         {result.had_covid && 
         <>
-            <h1>when?</h1>
+            <h4>when?</h4>
             <input type="date" value={result.had_covid_at} min="2018-01-01"  onChange={setHadCovidAt}/>
-            <p>{covidErrs.had_covid_at_err}</p>
+            <p className="err">{covidErrs.had_covid_at_err}</p>
         </>}
         
-        <h1>have you been vacinated?</h1>
+        <h4>have you been vacinated?</h4>
         <form onChange={setVaccinated}>
             <input type="radio" name="vacinated" value={true}/>Yes <br />
             <input type="radio" name="vacinated" value={false}/>No
         </form>
-        <p>{covidErrs.vaccinated_err}</p>
+        <p className="err">{covidErrs.vaccinated_err}</p>
 
         {result.vaccinated &&
         <>
-            <h1>when did you get your last covid vaccine?</h1>
+            <h4>when did you get your last covid vaccine?</h4>
             <input type="date" value={result.vaccinated_at} min="2018-01-01"  onChange={setVaccinatedAt}/>
-            <p>{covidErrs.vaccinated_at_err}</p>
+            <p className="err">{covidErrs.vaccinated_at_err}</p>
         </>
         }
-        <h1>{covidErrs.fill_all_err}</h1>
+        <p className="err">{covidErrs.fill_all_err}</p>
       </>
     );
   }

@@ -20,9 +20,9 @@ function RedberrianInsights({page, setPage, result, setResult}) {
     return (
       <div>
         <Body page={page} result={result} setResult={setResult} errRedberianInsights={errRedberianInsights} setErrRedberianInsights={setErrRedberianInsights}/>
-        <div>
-          <button onClick={backClicked}>Back</button>
-          <button onClick={nextClicked}>Next</button>
+        <div className="navBtns">
+          <button className="backBtn" onClick={backClicked}>{"<"}</button>
+          <button className="nextBtn" onClick={nextClicked}>{">"}</button>
         </div>
       </div>
     );

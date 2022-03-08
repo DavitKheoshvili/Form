@@ -21,24 +21,24 @@ function RedberrianInsightsForm({result, setResult, errRedberianInsights, setErr
 
     return (
       <div>
-        <h1>Would you attend Devtalks and maybe also organize your own?</h1>
+        <h4>Would you attend Devtalks and maybe also organize your own?</h4>
         <form onChange={setWillOrganizeDevtalk}>
           <input type="radio" id="will_organize_devtalk" name="will_organize_devtalk" value={true} defaultChecked={result.will_organize_devtalk}/>Yes <br />
           <input type="radio" id="will_organize_devtalk" name="will_organize_devtalk" value={false} defaultChecked={!result.will_organize_devtalk}/>No
-          <p>{errRedberianInsights.will_organize_devtalk_err}</p>
+          <p className="err">{errRedberianInsights.will_organize_devtalk_err}</p>
         </form>
         {result.will_organize_devtalk && 
           <>
-            <h1>What would you speak about Devtalks?</h1>
-            <input type="text" placeholder="I would..." name="devtalk_topic" onChange={setDevtalkTopic} value={result.devtalk_topic}/>
-            <p>{errRedberianInsights.devtalk_topic_err}</p>
+            <h4>What would you speak about Devtalks?</h4>
+            <textarea className="inputBigText" type="text" placeholder="I would..." name="devtalk_topic" onChange={setDevtalkTopic} value={result.devtalk_topic}/>
+            <p className="err">{errRedberianInsights.devtalk_topic_err}</p>
           </>
         }
          
       
-        <h1>Tell us something special</h1>
-        <input type="text" placeholder="I..." name="something_special" onChange={setSomethingSpecial} value={result.something_special}/>        
-        <p>{errRedberianInsights.something_special_err}</p>
+        <h4>Tell us something special</h4>
+        <textarea className="inputBigText" type="text" placeholder="I..." name="something_special" onChange={setSomethingSpecial} value={result.something_special}/>        
+        <p className="err">{errRedberianInsights.something_special_err}</p>
       </div>
     );
   }

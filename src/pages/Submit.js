@@ -10,7 +10,6 @@ function Submit({page, setPage, result, setResult}) {
     axios.post("https://bootcamp-2022.devtest.ge/api/application", result)
     setPage(page + 1)
     setTimeout(goLandingPage, 3000)
-    console.log('sumbit', result)
 
   }
   const goLandingPage = () => {
@@ -21,12 +20,11 @@ function Submit({page, setPage, result, setResult}) {
   }
 
   return (
-      <div>
-        <button onClick={submitClicked}>Submit</button>
-        <button onClick={goBackClicked}>go back</button>
+      <div className="submit">
+        <button className="submitBtn" onClick={submitClicked}>Submit</button>
+        <button className="goBackBtn" onClick={goBackClicked}>go back</button>
         <br />
       </div>
-      
     );
   }
   

@@ -3,16 +3,10 @@ import React, {useState, useEffect} from "react"
 import axios from "axios";
 
 
-function TechnicalSkillsetForm({result, setResult, errsTechSkills, setErrsTechSkills}) {
-    const [skillList, setSkillList] = useState([{id: "1", title: "HTML"}]);
-    useEffect(() => {
-      axios.get("https://bootcamp-2022.devtest.ge/api/skills")
-      .then(res => {
-        setSkillList(res.data)
-      })
-    }, [])
+function TechnicalSkillsetForm({skillList, result, setResult, errsTechSkills, setErrsTechSkills, page}) {
     
-    const [skill, setSkill] = useState({id:"1"});
+    
+    const [skill, setSkill] = useState({id:"1", title: "HTML"});
     
     const addSkill = () => {
       for(let i = 0; i < result.skills.length; i++){
@@ -36,24 +30,26 @@ function TechnicalSkillsetForm({result, setResult, errsTechSkills, setErrsTechSk
     }
     
     return (
-      <> 
-          <select onChange={addID}>
+      <div className="techSkillsForm"> 
+          
+          <select className="form-items" onChange={addID}>
             {skillList.map(skill => (
               <option key={skill.id} value={skill.id}>{skill.title}</option>
             ))}
           </select>
-          <input type={"text"} placeholder="Experience Duration In Years" onChange={addExperience}></input>
-          <button onClick={addSkill}>Add Programming Language</button>
-          <ul>
+          <input className="form-items" type={"text"} placeholder="Experience Duration In Years" onChange={addExperience}></input>
+          <button className="addLanguageBtn form-items" onClick={addSkill}>Add Programming Language</button>
+          <div className="form-items list" style={{color:"white"}}>
             {result.skills.map((obj) => (
-                <li key={obj.id}>{skillList.filter((elem) => elem.id == obj.id)[0].title} Years of experience: {obj.experience}  
-                  <button type="button" onClick={() => removeItem(obj.id)}>Delete</button>
-                </li>
+                <div className="listItem form-items" key={obj.id}>{skillList.filter((elem) => elem.id == obj.id)[0].title}  <span className="yearsOfExp">Years of experience: {obj.experience} </span> 
+                  <button type="button" className="buttonDlt" onClick={() => removeItem(obj.id)}>-</button>
+                </div>
             ))}
-          </ul>
-          <h1>{errsTechSkills.same_skill_err}</h1>
-          <h1>{errsTechSkills.min_skill_err}</h1>
-      </>
+            <h3 className="form-items err">{errsTechSkills.same_skill_err}</h3>
+          <h3 className="form-items err">{errsTechSkills.min_skill_err}</h3>
+          </div>
+          
+      </div>
     );
   }
   

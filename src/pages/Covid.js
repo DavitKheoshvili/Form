@@ -25,10 +25,14 @@ function Covid({page, setPage, result, setResult}) {
   }
     return (
 
-      <div>
-        <Body page={page} result={result} setResult={setResult} covidErrs={covidErrs} setCovidErrs={setCovidErrs}/>
-        <button onClick={backClicked}>Back</button>
-        <button onClick={nextClicked}>Next</button>
+      <div className="covidPage">
+        <div className="covidPageDiv1">
+          <Body page={page} result={result} setResult={setResult} covidErrs={covidErrs} setCovidErrs={setCovidErrs}/>
+        </div>
+        <div className="navBtns covidPageDiv2">
+          <button className="backBtn" onClick={backClicked}>{"<"}</button>
+          <button className="nextBtn" onClick={nextClicked}>{">"}</button>
+        </div>
       </div>
     );
   }

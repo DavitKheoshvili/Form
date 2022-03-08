@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import FormNavigation from "./architecture/FormNavigation";
 import Body from "./architecture/Body";
 
-function TechnicalSkillset({page, setPage, result, setResult}) {
+function TechnicalSkillset({skillList, page, setPage, result, setResult}) {
   const [errsTechSkills, setErrsTechSkills] = useState({
     min_skill_err: "",
     same_skill_err: ""
@@ -19,12 +19,13 @@ function TechnicalSkillset({page, setPage, result, setResult}) {
     setPage(page - 1)
   }
   
-  
     return (
       <div>
-        <Body page={page} result={result} setResult={setResult} errsTechSkills={errsTechSkills} setErrsTechSkills={setErrsTechSkills}/>
-        <button onClick={backClicked}>Back</button>
-        <button onClick={nextClicked}>Next</button>
+        <Body skillList={skillList} page={page} result={result} setResult={setResult} errsTechSkills={errsTechSkills} setErrsTechSkills={setErrsTechSkills}/>
+        <div className="navBtns">
+          <button className="backBtn" onClick={backClicked}>{"<"}</button>
+          <button className="nextBtn" onClick={nextClicked}>{">"}</button>
+        </div>
       </div>
     );
   }

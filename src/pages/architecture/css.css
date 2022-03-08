@@ -1,7 +1,3 @@
-div {
-    padding: 2px;
-    border: 2px solid black;
-}
 
 .headers {
     display: flex;
@@ -22,3 +18,190 @@ div {
 
 .content > * { flex: 1; }
 
+.App {
+    background-color: black;
+    color: #FE3B1F;
+    width: 100vw;
+    text-align: center;
+}
+.Index {
+    background-color: black;
+    margin: 0;
+}
+
+.landing {
+    display: flex;
+    font-size: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+}
+.startBtn {
+    background-color: #FE3B1F;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 30px 10px 30px;
+    border-width: 0;
+    margin: 20px 0 20px 0;
+}
+
+.submittedAppsBtn {
+    background-color: black;
+    color: #FFFFFF;
+    border-width: 0;
+    text-decoration: underline;
+    
+}
+.formPagesBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.headers {
+    width: 100vw;
+    align-self: center;
+    display: flex;
+    flex: 1 1;
+    justify-content: space-around;
+    max-height: 35vh;
+}
+.contentHeader {
+    font-size: 1.5vw;
+    background: white;
+    width: 100%;
+    padding: 5vh 5vw;
+    text-align: center;
+}
+.infoHeader {
+    background-color: black;
+    width: 100%;
+    font-size: 1.5vw;
+    padding: 5vh 5vw;
+    text-align: start;
+}
+.content {
+    width: 100vw;
+    align-self: center;
+    display: flex;
+    flex: 1 1;
+    justify-content: space-around;
+}
+.form {
+    font-size: 1.5vw;
+    background: white;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    color: black;
+}
+.infoText {
+    background-color: black;
+    width: 100%;
+    font-size: 1.5vw;
+    padding: 0vh 5vw;
+    text-align: start;
+}
+.addLanguageBtn {
+    background-color: #FE3B1F;
+    border: 0;
+    width: 40%;
+    align-self: flex-end;
+}
+.navBtns {
+    background-color: white;
+    width: 50%;
+}
+.techSkillsForm {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-items {
+    margin-top: 20px;
+    height: 30px;
+}
+.err {
+    color: red;
+}
+.list {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+.listItem {
+    color: black;
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: start;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttonDlt {
+    font-size: 18px;
+    border-width: 0;
+    background-color: white;
+    color: #FE3B1F;
+}
+.covidPage {
+    display: flex;
+    flex-direction: column;
+}
+.covidPageDiv1 {
+    flex: 1;
+}
+.covidPageDiv2 {
+    flex: 2;
+}
+.inputBigText {
+    width: 100%;
+    height: 100px;
+}
+
+.submitBtn {
+    background-color: #FE3B1F;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 50px 10px 50px;
+    border-width: 0;
+    margin: 20px 0 20px 0;
+}
+
+.goBackBtn {
+    background-color: black;
+    color: #FFFFFF;
+    border-width: 0;
+    text-decoration: underline;
+}
+.submit {
+    background-color: black;
+    display: flex;
+    font-size: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40vh;
+}
+
+.thanksForJoining {
+    font-size: 64px;
+    margin-top: 40vh;
+}
+.backBtn {
+    border-radius: 50%;
+    border: 1px solid #FE3B1F;
+    color: #FE3B1F;
+    margin-right: 20px;
+}
+.nextBtn {
+    border-radius: 50%;
+    border: 1px solid #FE3B1F;
+    color: #FE3B1F;
+    margin-left: 20px;
+}

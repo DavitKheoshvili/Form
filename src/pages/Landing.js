@@ -12,11 +12,11 @@ function Landing({setPage}) {
   }
   
   return (
-    <div>
+    <div className="landing">
       <MainHeader />
-        <button onClick={startClicked}>Start Questionarie</button>
-        <button onClick={submitedAplicationsClicked}>Submited Applications</button>
-      </div>
+      <button className="startBtn" onClick={startClicked}>Start Questionarie</button>
+      <button className="submittedAppsBtn" onClick={submitedAplicationsClicked}>Submited Applications</button>
+    </div>
     );
   }
   
