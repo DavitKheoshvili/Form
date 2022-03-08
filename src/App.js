@@ -27,17 +27,14 @@ function App() {
     devtalk_topic: "",
     something_special: ""
   })
-  
   const [skillList, setSkillList] = useState([{id: "1", title: "HTML"}]);
     useEffect(() => {
       axios.get("https://bootcamp-2022.devtest.ge/api/skills")
       .then(res => {
         setSkillList(res.data)
       })
-       console.log("vvv" , skillList)
-
     }, [])
-
+  
   return (
     <div className="App">
       { page === 1 && <Landing setPage={ setPage} />}

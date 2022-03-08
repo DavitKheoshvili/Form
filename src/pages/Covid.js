@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import FormNavigation from "./architecture/FormNavigation";
 import Body from "./architecture/Body";
 
 function Covid({page, setPage, result, setResult}) {

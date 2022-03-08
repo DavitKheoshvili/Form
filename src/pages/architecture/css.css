@@ -205,3 +205,43 @@
     color: #FE3B1F;
     margin-left: 20px;
 }
+.submitedListItem {
+    background-color: #FE3B1F;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 10px;
+    color: white;
+    text-align: start;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.submitedListItem {
+    font-size: 16px;
+}
+.submitedListItem {
+    border-width: 0px;
+}
+.selectedItem {
+    background-color: white;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    color: black;
+    text-align: start;
+}
+.flexBox {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 8vw;
+    flex: 1 1 0px;
+}
+.flexBoxItem {
+    width: 50%;
+    color: #FE3B1F;
+}
+.flexCol {
+    display: flex;
+    flex-direction: column;
+}

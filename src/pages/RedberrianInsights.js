@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import Body from "./architecture/Body";
-import FormNavigation from "./architecture/FormNavigation";
 
 function RedberrianInsights({page, setPage, result, setResult}) {
   const [errRedberianInsights, setErrRedberianInsights] = useState({

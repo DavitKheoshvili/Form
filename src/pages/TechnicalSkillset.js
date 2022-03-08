@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import FormNavigation from "./architecture/FormNavigation";
 import Body from "./architecture/Body";
 
 function TechnicalSkillset({skillList, page, setPage, result, setResult}) {
