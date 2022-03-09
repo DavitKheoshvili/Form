@@ -108,7 +108,7 @@
 .addLanguageBtn {
     background-color: #FE3B1F;
     border: 0;
-    width: 40%;
+    width: 200px;
     align-self: flex-end;
 }
 .navBtns {
@@ -198,6 +198,7 @@
     border: 1px solid #FE3B1F;
     color: #FE3B1F;
     margin-right: 20px;
+
 }
 .nextBtn {
     border-radius: 50%;
