@@ -1,132 +1,174 @@
-
+html,
+#root {
+ height: 100%;
+}
+body {
+ font-family: "Rowdies", cursive;
+ height: 100%;
+}
 .headers {
-    display: flex;
-    justify-content: space-around;
+ display: flex;
+ justify-content: space-around;
 }
-
 .content {
-    display: flex;
-    justify-content: space-around;
+ display: flex;
+ justify-content: space-around;
 }
-
 .form {
-    display: flex;
-    
-    flex: 1 1 0px;
-    flex-direction: column;
+ display: flex;
+ flex: 1 1 0px;
+ flex-direction: column;
 }
-
-.content > * { flex: 1; }
-
+.content > * {
+ flex: 1;
+}
 .App {
-    background-color: black;
-    color: #FE3B1F;
-    width: 100vw;
-    text-align: center;
+ background-color: black;
+ color: #fe3b1f;
+ width: 100vw;
+ height: 100%;
+ text-align: center;
 }
 .Index {
-    background-color: black;
-    margin: 0;
+ background-color: black;
+ margin: 0;
 }
-
 .landing {
-    display: flex;
-    font-size: 2vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20vh;
+ display: flex;
+ width: 100%;
+ height: 100%;
+ background-repeat: repeat;
+ font-size: 2vw;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+}
+.landing-inner {
+ display: flex;
+ width: 100%;
+ height: 100%;
+ flex-direction: column;
+ align-items: center;
+ padding-top: 5%;
+}
+.rocketman img {
+ max-width: 500px;
 }
 .startBtn {
-    background-color: #FE3B1F;
-    color: white;
-    border-radius: 50px;
-    padding: 10px 30px 10px 30px;
-    border-width: 0;
-    margin: 20px 0 20px 0;
+ background-color: #fe3b1f;
+ color: white;
+ border-radius: 50px;
+ padding: 20px 60px;
+ border-width: 0;
+ font-size: 24px;
+ margin: 20px 0;
+ font-weight: 400;
+ font-family: "Montserrat", sans-serif;
 }
-
 .submittedAppsBtn {
-    background-color: black;
-    color: #FFFFFF;
-    border-width: 0;
-    text-decoration: underline;
-    
+ background-color: black;
+ color: #ffffff;
+ border-width: 0;
+ text-decoration: underline;
+ font-family: "Montserrat", sans-serif;
+ font-size: 20px;
 }
 .formPagesBody {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
 }
-
 .headers {
-    width: 100vw;
-    align-self: center;
-    display: flex;
-    flex: 1 1;
-    justify-content: space-around;
-    max-height: 35vh;
+ width: 100vw;
+ align-self: center;
+ display: flex;
+ flex: 1 1;
+ justify-content: space-around;
+ max-height: 35vh;
 }
 .contentHeader {
-    font-size: 1.5vw;
-    background: white;
-    width: 100%;
-    padding: 5vh 5vw;
-    text-align: center;
+ font-size: 1.5vw;
+ background: white;
+ width: 100%;
+ padding: 5vh 5vw;
+ text-align: center;
 }
 .infoHeader {
-    background-color: black;
-    width: 100%;
-    font-size: 1.5vw;
-    padding: 5vh 5vw;
-    text-align: start;
+ background-color: black;
+ width: 100%;
+ font-size: 1.5vw;
+ padding: 5vh 5vw;
+ text-align: start;
 }
 .content {
-    width: 100vw;
-    align-self: center;
-    display: flex;
-    flex: 1 1;
-    justify-content: space-around;
+ width: 100vw;
+ align-self: center;
+ display: flex;
+ flex: 1 1;
+ justify-content: space-around;
 }
 .form {
-    font-size: 1.5vw;
-    background: white;
-    width: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    text-align: center;
-    color: black;
+ font-size: 1.5vw;
+ background: white;
+ width: 100%;
+ padding-left: 5vw;
+ padding-right: 5vw;
+ text-align: center;
+ color: black;
+ font-family: "Montserrat", sans-serif;
+}
+.form input {
+ border: 1px solid #525557;
+ padding: 17px 57px;
+ font-size: 14px;
+ font-style: italic;
+ color: #454545;
+ outline: none;
+ font-family: "Montserrat", sans-serif;
 }
 .infoText {
-    background-color: black;
-    width: 100%;
-    font-size: 1.5vw;
-    padding: 0vh 5vw;
-    text-align: start;
+ background-color: black;
+ width: 100%;
+ font-size: 1.5vw;
+ padding: 0vh 5vw;
+ text-align: start;
 }
 .addLanguageBtn {
-    background-color: #FE3B1F;
-    border: 0;
-    width: 200px;
-    align-self: flex-end;
+ margin-top: 22px;
+ background-color: #fe3b1f;
+ border: 0;
+ align-self: flex-end;
+ font-family: "Montserrat", sans-serif;
+ font-size: 12px;
+ font-weight: 400;
+ color: #fff;
+ padding: 10px 12px;
 }
 .navBtns {
-    background-color: white;
-    width: 50%;
+ background-color: white;
+ width: 50%;
 }
 .techSkillsForm {
-    display: flex;
-    flex-direction: column;
-    
+ display: flex;
+ flex-direction: column;
 }
-
-.form-items {
-    margin-top: 20px;
-    height: 30px;
+.techSkillsForm select {
+ border: 1px solid #525557;
+ padding: 17px 57px;
+ font-size: 14px;
+ font-style: italic;
+ color: #454545;
+ outline: none;
+ font-family: "Montserrat", sans-serif;
+ margin-bottom: 30px;
 }
 .err {
-    color: red;
+ color: #fe3b1f;
+ font-size: 12px;
+ font-style: italic;
+ font-weight: 400;
+ text-align: left;
+ padding-left: 57px;
 }
 .list {
  width: 100%;
@@ -135,138 +177,138 @@
  align-items: flex-start;
 }
 .listItem {
-    color: black;
-    list-style-type: none;
-    border: 1px solid black;
-    text-align: start;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+ color: black;
+ list-style-type: none;
+ border: 1px solid black;
+ text-align: start;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
 }
 .buttonDlt {
-    font-size: 18px;
-    border-width: 0;
-    background-color: white;
-    color: #FE3B1F;
+ font-size: 18px;
+ border-width: 0;
+ background-color: white;
+ color: #fe3b1f;
 }
 .covidPage {
-    display: flex;
-    flex-direction: column;
+ display: flex;
+ flex-direction: column;
 }
 .covidPageDiv1 {
-    flex: 1;
+ flex: 1;
 }
 .covidPageDiv2 {
-    flex: 2;
+ flex: 2;
 }
 .inputBigText {
-    width: 100%;
-    height: 100px;
+ width: 100%;
+ height: 100px;
 }
-
 .submitBtn {
-    background-color: #FE3B1F;
-    color: white;
-    border-radius: 50px;
-    padding: 10px 50px 10px 50px;
-    border-width: 0;
-    margin: 20px 0 20px 0;
+ background-color: #fe3b1f;
+ color: white;
+ border-radius: 50px;
+ padding: 10px 50px 10px 50px;
+ border-width: 0;
+ margin: 20px 0 20px 0;
 }
-
 .goBackBtn {
-    background-color: black;
-    color: #FFFFFF;
-    border-width: 0;
-    text-decoration: underline;
+ background-color: black;
+ color: #ffffff;
+ border-width: 0;
+ text-decoration: underline;
 }
 .submit {
-    background-color: black;
-    display: flex;
-    font-size: 2vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 40vh;
+ background-color: black;
+ display: flex;
+ font-size: 2vw;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding-top: 40vh;
 }
-
 .thanksForJoining {
-    font-size: 64px;
-    margin-top: 40vh;
+ font-size: 64px;
+ margin-top: 40vh;
 }
 .backBtn {
-    border-radius: 50%;
-    border: 1px solid #FE3B1F;
-    color: #FE3B1F;
-    margin-right: 20px;
-
+ border-radius: 50%;
+ border: 1px solid #fe3b1f;
+ color: #fe3b1f;
+ margin-right: 20px;
 }
 .nextBtn {
-    border-radius: 50%;
-    border: 1px solid #FE3B1F;
-    color: #FE3B1F;
-    margin-left: 20px;
+ border-radius: 50%;
+ border: 1px solid #fe3b1f;
+ color: #fe3b1f;
+ margin-left: 20px;
 }
 .submitedListItem {
-    background-color: #FE3B1F;
-    width: 60vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-top: 10px;
-    color: white;
-    text-align: start;
-    padding: 0px 15px 0px 15px;
-    display: flex;
-    justify-content: space-between;
+ background-color: #fe3b1f;
+ width: 60vw;
+ margin-left: 20vw;
+ margin-right: 20vw;
+ margin-top: 10px;
+ color: white;
+ text-align: start;
+ padding: 0px 15px 0px 15px;
+ display: flex;
+ justify-content: space-between;
 }
 .submitedListItem {
-    font-size: 16px;
+ font-size: 16px;
 }
 .submitedListItem {
-    border-width: 0px;
+ border-width: 0px;
 }
 .selectedItem {
-    background-color: white;
-    width: 60vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    color: black;
-    text-align: start;
-    padding-bottom: 30px;
-    padding-top: 20px;
-
+ background-color: white;
+ width: 60vw;
+ margin-left: 20vw;
+ margin-right: 20vw;
+ color: black;
+ text-align: start;
+ padding-bottom: 30px;
+ padding-top: 20px;
 }
 .flexBox {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 8vw;
+ display: flex;
+ justify-content: flex-start;
+ padding-left: 8vw;
 }
 .flexBoxItem {
-    width: 50%;
-    color: #FE3B1F;
+ width: 50%;
+ color: #fe3b1f;
 }
 .flexCol {
-    display: flex;
-    flex-direction: column;
+ display: flex;
+ flex-direction: column;
 }
 .box {
-    display: flex;
-    color: black;
+ display: flex;
+ color: black;
 }
 .boxValues {
-    margin-left: 20px;
+ margin-left: 20px;
 }
 .workPreferences {
-    color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
+ color: black;
+ margin-top: 10px;
+ margin-bottom: 10px;
 }
 .workPreferences * {
-    margin-top: 10px;
+ margin-top: 10px;
 }
-
-.insights *{
-    color: black;
-    margin-top: 10px;
+.insights * {
+ color: black;
+ margin-top: 10px;
 }
-
+.goWelcomePage {
+    background-color: black;
+    color: #ffffff;
+    border-width: 0;
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}

@@ -1,8 +1,6 @@
 import React, {useState} from "react"
 import MainHeader from "./architecture/MainHeader";
 
-
-
 function Landing({setPage}) {
   const startClicked = () => {
     setPage(2)
@@ -13,9 +11,12 @@ function Landing({setPage}) {
   
   return (
     <div className="landing">
-      <MainHeader />
-      <button className="startBtn" onClick={startClicked}>Start Questionarie</button>
-      <button className="submittedAppsBtn" onClick={submitedAplicationsClicked}>Submited Applications</button>
+      <div className="landing-inner">
+        <MainHeader />
+        <button className="startBtn" onClick={startClicked}>Start Questionarie</button>
+        <button className="submittedAppsBtn" onClick={submitedAplicationsClicked}>Submited Applications</button>
+      </div>
+      
     </div>
     );
   }

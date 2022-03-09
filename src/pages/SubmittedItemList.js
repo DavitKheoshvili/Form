@@ -29,7 +29,7 @@ function SubmittedItemList({setPage, skillList}) {
     return (
       <div>
         <h1> Submited Applications</h1>
-        <button onClick={goLandingPage}>Go Welcome Page</button>
+        <button className="goWelcomePage" onClick={goLandingPage}>Go Welcome Page</button>
         
         <div className="submitedListItems">
         {applicationList.map((elem, index) => (
