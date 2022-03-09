@@ -1,12 +1,11 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 
-import axios from "axios";
 
 
 function TechnicalSkillsetForm({skillList, result, setResult, errsTechSkills, setErrsTechSkills, page}) {
     
     
-    const [skill, setSkill] = useState({id:"1", title: "HTML"});
+    const [skill, setSkill] = useState({id:"1", title: "HTML", experience: "1"});
     
     const addSkill = () => {
       for(let i = 0; i < result.skills.length; i++){
