@@ -48,26 +48,26 @@ function SelectedItem({item, skillList}) {
         <div className="flexBox">
           <div className="flexBoxItem">Covid Situation
           <div className="workPreferences">
-            <label className="">How would you prefer to work? <br/>
+            <label className="question">How would you prefer to work? <br/>
               <input type="radio" name="WorkPreferences" checked={workPrefCheck("from_office")} disabled/> From Sairme Office <br/>
               <input type="radio" name="WorkPreferences" checked={workPrefCheck("from_home")} disabled/> From Home <br/>
               <input type="radio" name="WorkPreferences" checked={workPrefCheck("hybrid")} disabled/> Hybrid
-            </label> <br/>
-            <label className="">Did you have covid 19? <br/>
+            </label> <br/> <br/>
+            <label className="question">Did you have covid 19? <br/>
               <input type="radio" name="had_covid" checked={item.had_covid} disabled/> Yes <br/>
               <input type="radio" name="had_covid" checked={!item.had_covid} disabled/> No <br/>
             </label> 
             {item.had_covid && <><p>When you have Covid 19?</p><input type="date" value={item.had_covid_at} disabled/></>} <br/> 
-
-            <label className="">Have you been vaccinated? <br/>
+            <br/>
+            <label className="question">Have you been vaccinated? <br/>
               <input type="radio" name="vaccinated" checked={item.vaccinated} disabled/> Yes <br/>
               <input type="radio" name="vaccinated" checked={!item.vaccinated} disabled/> No <br/>
             </label> 
             {item.vaccinated && <input type="date" value={item.had_covid_at} disabled/>}
             </div>
           </div>
-          <div className="flexBoxItem">Insigts
-          <label className="">Would you attend devtalks and maybe also organize your own?<br/>
+          <div className="insights flexBoxItem">Insigts <br /> <br />
+          <label className="insightsLabel">Would you attend devtalks and maybe also organize your own?<br/>
               <input type="radio" name="devTalks" checked={item.will_organize_devtalk} disabled/> Yes <br/>
               <input type="radio" name="devTalks" checked={!item.will_organize_devtalk} disabled/> No <br/>
           </label> 
