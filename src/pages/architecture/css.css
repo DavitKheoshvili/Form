@@ -235,7 +235,6 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 8vw;
-    flex: 1 1 0px;
 }
 .flexBoxItem {
     width: 50%;
@@ -245,3 +244,18 @@
     display: flex;
     flex-direction: column;
 }
+.box {
+    display: flex;
+    color: black;
+}
+.boxValues {
+    margin-left: 20px;
+}
+.workPreferences {
+    color: black;
+    margin-top: 10px;
+}
+.workPreferences * {
+    margin-top: 10px;
+}
+

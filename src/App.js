@@ -46,7 +46,7 @@ function App() {
       </div>
       { page === 6 && <Submit page={page} setPage={setPage} result={resultJson} setResult={setResultJson}/>}
       { page === 7 && <Thanks />}
-      { page === 8 && <SubmittedItemList setPage={setPage}/>}
+      { page === 8 && <SubmittedItemList setPage={setPage} skillList={skillList}/>}
     </div>
   );
 }

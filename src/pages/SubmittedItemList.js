@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import axios from "axios"
 import SelectedItem from "./architecture/SelectedItem"
 
-function SubmittedItemList({setPage}) {
+function SubmittedItemList({setPage, skillList}) {
   const [applicationList, setApplicationList] = useState([])
     useEffect(() => {
       axios.get("https://bootcamp-2022.devtest.ge/api/applications?token=89nOpas%7Casdanjjh%5E%26as")
@@ -38,7 +38,7 @@ function SubmittedItemList({setPage}) {
             <p>{index}</p>
             <p>^</p>
           </button>
-          {itemClicked==index && <SelectedItem item={elem}/>}
+          {itemClicked==index && <SelectedItem item={elem} skillList={skillList}/>}
         </div>
         ))}
         </div>
